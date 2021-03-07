@@ -17,7 +17,8 @@ extents = Vector2( 9, 9 )
 polygon = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 20.699, 19.5361, -3.72066, 19.7687, -4.1858, -4.8835, 20.699, -4.8835 )
+custom_solver_bias = 1.0
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 
 [sub_resource type="TileSet" id=5]
 0/name = "Wall.jpg 0"

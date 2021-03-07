@@ -20,7 +20,3 @@ func _on_AggroArea_body_entered(body):
 func _on_AggroArea_body_exited(body):
 	if body.name == "Player":
 		target = null
-
-func _on_Hitbox_body_entered(body):
-	if "Bullet" in body.name:
-		queue_free()

@@ -7,12 +7,14 @@
 extents = Vector2( 6.1545, 6.09202 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9, 9 )
+extents = Vector2( 9.25, 9.25 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 289.954
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource( 2 )
@@ -38,6 +40,5 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AggroArea"]
 visible = false
 shape = SubResource( 3 )
-[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
 [connection signal="body_entered" from="AggroArea" to="." method="_on_AggroArea_body_entered"]
 [connection signal="body_exited" from="AggroArea" to="." method="_on_AggroArea_body_exited"]
