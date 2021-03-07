@@ -30,10 +30,14 @@ func _physics_process(delta):
 func fire(delta):
 	var bulletInstance = bullet.instance()
 	bulletInstance.position = get_global_position()
-	bulletInstance.rotation_degrees = rotation_degrees * rand_range(0, 1)
+	bulletInstance.rotation_degrees = rand_range(0, 360)
 	
 	bulletInstance.apply_impulse(Vector2(), Vector2(bulletSpeed,0).rotated(rotation) * delta)
 	get_tree().get_root().call_deferred("add_child", bulletInstance) # queing function
+	
+	# 1.5 second clean up
+	#yield(get_tree().create_timer(1.5), "timeout")
+	#bulletInstance.queue_free()
 
 func kill():
 	get_tree().reload_current_scene()
