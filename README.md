@@ -1,4 +1,4 @@
-# Top Down Shooter Learning Project
+# Godot Top Down Shooter [Learning and Implement Project]
 
 Inspired by Eli Cuaycong https://www.youtube.com/watch?v=HycyFNQfqI0 
 
