@@ -12,7 +12,7 @@ gravity_scale = 0.0
 continuous_cd = 1
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.952941, 1, 0.552941, 1 )
+modulate = Color( 0.235294, 0.109804, 0, 1 )
 scale = Vector2( 0.5, 0.2 )
 texture = ExtResource( 1 )
 
