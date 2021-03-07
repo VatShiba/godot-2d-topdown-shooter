@@ -6,6 +6,7 @@ Feature Lists:
 - Shoot Bullets
 - WASD Movement
 - Bad Enemies
+- Light & Shadow
 - **TODO** Multiplayer
 - **TODO** Enemy Healthbar 
 - **TODO** Random Enemy Spawner
