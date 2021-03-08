@@ -7,8 +7,9 @@ Feature Lists:
 - WASD Movement
 - Bad Enemies
 - Light & Shadow
-- **TODO** Multiplayer
+- **TODO** World Generator
 - **TODO** Enemy Healthbar 
 - **TODO** Random Enemy Spawner
+- **TODO** Random Size, Speed, HP
 - **TODO** Parallax Background and Particles
-- **TODO** World Generator
+- **TODO** Multiplayer

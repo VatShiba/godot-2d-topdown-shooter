@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/misc/Enemy.jpg" type="Texture" id=1]
 [ext_resource path="res://scripts/Enemy.gd" type="Script" id=2]
@@ -11,6 +11,12 @@ extents = Vector2( 9.25, 9.25 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 289.954
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.109804, 0.45098, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.27451, 0.27451, 0.27451, 1 )
 
 [node name="Enemy" type="KinematicBody2D" groups=[
 "Enemy",
@@ -40,5 +46,19 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AggroArea"]
 visible = false
 shape = SubResource( 3 )
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+margin_left = -16.5
+margin_top = -18.2484
+margin_right = 50.5
+margin_bottom = -4.24836
+rect_scale = Vector2( 0.5, 0.5 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+value = 10.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="AggroArea" to="." method="_on_AggroArea_body_entered"]
 [connection signal="body_exited" from="AggroArea" to="." method="_on_AggroArea_body_exited"]
