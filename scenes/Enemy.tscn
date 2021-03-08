@@ -7,7 +7,6 @@
 extents = Vector2( 6.1545, 6.09202 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9.25, 9.25 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 289.954
@@ -22,7 +21,7 @@ bg_color = Color( 0.27451, 0.27451, 0.27451, 1 )
 "Enemy",
 ]]
 collision_layer = 2
-collision_mask = 9
+collision_mask = 11
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -60,5 +59,6 @@ percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
 [connection signal="body_entered" from="AggroArea" to="." method="_on_AggroArea_body_entered"]
 [connection signal="body_exited" from="AggroArea" to="." method="_on_AggroArea_body_exited"]
