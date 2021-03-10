@@ -33,9 +33,13 @@ func _on_AggroArea_body_exited(body):
 
 func onHit(damagePoint):
 	hp -= damagePoint
+	
+	# Text popup
 	var text = floatingText.instance()
 	text.amount = damagePoint
-	add_child(text)
+	text.position = global_position
+	get_owner().add_child(text)
+	
 	updateHealthbar()
 	if(hp <= 0):
 		killed()
