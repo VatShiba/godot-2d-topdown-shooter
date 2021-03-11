@@ -44,10 +44,10 @@ func onHit(damagePoint):
 	hp -= damagePoint
 	
 	# Text popup
-	var text = floatingText.instance()
-	text.amount = damagePoint
-	text.position = global_position
-	get_owner().add_child(text)
+	var textInstance = floatingText.instance()
+	textInstance.amount = damagePoint
+	textInstance.position = global_position
+	get_tree().get_root().add_child(textInstance)
 	
 	updateHealthbar()
 	if(hp <= 0):
