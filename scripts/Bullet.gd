@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+var isActive = true
 
 func _ready():
 	yield(get_tree().create_timer(1),"timeout")

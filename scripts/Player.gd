@@ -33,11 +33,10 @@ func fire(delta):
 	#bulletInstance.rotation_degrees = rotation_degrees
 	bulletInstance.rotation_degrees = rand_range(0, 360)
 	bulletInstance.apply_impulse(Vector2(), Vector2(bulletSpeed, 0).rotated(rotation) * delta)
-	get_tree().get_root().call_deferred("add_child", bulletInstance) # queing function
+	get_owner().call_deferred("add_child", bulletInstance) # queing function
 
 func kill():
 	get_tree().reload_current_scene()
-
 
 func _on_Area2D_body_entered(body):
 	if "Enemy" in body.name:
