@@ -7,7 +7,7 @@ var target = null
 var hp = null
 onready var sprite = $Sprite
 onready var healthBar = get_owner().get_node("HealthBar")
-var floatingText = preload("res://scenes/GUI/FloatingText.tscn")
+var floatingText = preload("res://scenes/generator/FloatingText.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +21,9 @@ func init():
 	self.scale = Vector2(randomScale, randomScale)
 	
 	# Random HP
-	maxHp = rand_range(randomMaxHpRange[0], randomMaxHpRange[1])
+	var hpScale = randomScale * 0.5
+	maxHp = rand_range(randomMaxHpRange[0], \
+	randomMaxHpRange[1] * hpScale)
 	hp = maxHp
 	# Random Sprite Color of Enemies
 	sprite.modulate = Color(randf(), randf(), randf())
