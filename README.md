@@ -8,8 +8,11 @@ Feature Lists:
 - Bad Enemies
 - Light & Shadow
 - Enemy Healthbar 
+- Random Enemy Spawner
+- Random Size, Speed, HP
 - **TODO** World Generator
-- **TODO** Random Enemy Spawner
-- **TODO** Random Size, Speed, HP
-- **TODO** Parallax Background and Particles
+- **TODO** Menu
+- **TODO** Skin Shop
+- **TODO** Parallax Particles
+- **TODO** Mobile Port
 - **TODO** Multiplayer
