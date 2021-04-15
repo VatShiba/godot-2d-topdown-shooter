@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/player/player.png" type="Texture" id=1]
+[ext_resource path="res://assets/player/Player.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/light/Light.jpg" type="Texture" id=2]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=3]
 

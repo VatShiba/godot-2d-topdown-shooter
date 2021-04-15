@@ -9,13 +9,13 @@ extents = Vector2( 6.1545, 6.09202 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.109804, 0.45098, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.27451, 0.27451, 0.27451, 1 )
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="CircleShape2D" id=3]
 radius = 289.954
 
 [node name="Enemy" type="Node2D"]
@@ -46,12 +46,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -26.719
-margin_right = 20.0
-margin_bottom = -16.719
-custom_styles/fg = SubResource( 3 )
-custom_styles/bg = SubResource( 4 )
+margin_left = -25.0
+margin_top = -24.478
+margin_right = 25.0
+margin_bottom = -14.478
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
 value = 10.0
 percent_visible = false
 __meta__ = {
@@ -59,9 +59,10 @@ __meta__ = {
 }
 
 [node name="AggroArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AggroArea"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 [connection signal="body_entered" from="Enemy/Hitbox" to="Enemy" method="_on_Hitbox_body_entered"]
 [connection signal="body_entered" from="AggroArea" to="Enemy" method="_on_AggroArea_body_entered"]
 [connection signal="body_exited" from="AggroArea" to="Enemy" method="_on_AggroArea_body_exited"]
