@@ -2,7 +2,9 @@
 
 Inspired by Eli Cuaycong https://www.youtube.com/watch?v=HycyFNQfqI0 
 
-Feature Lists:
+![Alt text](/screenshots/snapshot.gif?raw=true)
+
+## Features
 - Shoot Bullets
 - WASD Movement
 - Bad Enemies
@@ -10,9 +12,11 @@ Feature Lists:
 - Enemy Healthbar 
 - Random Enemy Spawner
 - Random Size, Speed, HP
-- **TODO** World Generator
-- **TODO** Menu
-- **TODO** Skin Shop
-- **TODO** Parallax Particles
-- **TODO** Mobile Port
-- **TODO** Multiplayer
+- Menu
+
+## TODOs
+- World Generator
+- Skin Shop
+- Parallax Particles
+- Mobile Port
+- Multiplayer
